@@ -17,6 +17,7 @@ export const CalendarProvider = ({children}) => {
                 calendarDay: true,
                 uuid: uuidv4(),
                 date: moment(`${year}-${month}-${i}`, "YYYY-MM-DD").format("MM/DD/YYYY"),
+                workouts: {}
             })
         }
         if (startOfMonth > 1) {
