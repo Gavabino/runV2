@@ -13,7 +13,6 @@ const CalendarContainer = ({month}) => {
 const styles = {
     container: {
         width: "100vw",
-        border: "1px solid red",
     }
 }
 
