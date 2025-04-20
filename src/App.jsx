@@ -1,11 +1,14 @@
 import './App.css'
 import Calendar from "./components/calendar/Calendar.jsx";
+import {CalendarProvider} from "./contexts/CalendarContext.jsx";
 
 function App() {
 
     return (
         <div style={styles.container}>
-            <Calendar/>
+            <CalendarProvider>
+                <Calendar />
+            </CalendarProvider>
         </div>
   )
 }

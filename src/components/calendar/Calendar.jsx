@@ -6,7 +6,7 @@ import TableHeader from "./TableHeader.jsx";
 const Calendar = () => {
     const {getNewMonth} = useCalendar()
 
-    const month = getNewMonth(2025, 4)
+    const month = getNewMonth()
     return (
         <table style={styles.table}>
             <CalendarHeader month={month}/>

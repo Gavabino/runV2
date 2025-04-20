@@ -1,7 +1,13 @@
 const CalendarHeader = ({month}) => {
     return (
         <thead style={styles.text}>
-        {month.title}
+        <tr>
+            <td>
+                <button></button>
+                {month.title}
+                <button></button>
+            </td>
+        </tr>
         </thead>
     )
 }
