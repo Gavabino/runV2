@@ -1,23 +1,29 @@
+import {useCalendar} from "../../contexts/CalendarContext.jsx";
+import styles from "./CalendarHeader.module.css";
+
 const CalendarHeader = ({month}) => {
+    const {increaseMonth, decreaseMonth} = useCalendar()
+
     return (
-        <thead style={styles.text}>
-        <tr>
-            <td>
-                <button></button>
+        <caption style={internalStyles.container}>
+        <div style={internalStyles.text}>
+                <button className={styles.button} style={styles.button} onClick={() => decreaseMonth()}>&lt;</button>
                 {month.title}
-                <button></button>
-            </td>
-        </tr>
-        </thead>
+                <button className={styles.button} style={styles.button} onClick={() => increaseMonth()}>&gt;</button>
+        </div>
+        </caption>
     )
 }
 
-const styles = {
+const internalStyles = {
+    container: {
+       textAlign: "left"
+    },
     text: {
         fontFamily: 'var(--font-primary)',
         fontSize: 'var(--font-xl)',
         color: 'var(--accent1)',
-    }
+    },
 }
 
 export default CalendarHeader

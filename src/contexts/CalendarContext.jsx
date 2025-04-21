@@ -2,7 +2,6 @@ import {createContext, useContext, useState} from "react";
 import moment from "moment";
 import {v4 as uuidv4} from "uuid";
 
-
 const CalendarContext = createContext({});
 export const useCalendar = () => useContext(CalendarContext);
 export const CalendarProvider = ({children}) => {
@@ -67,7 +66,15 @@ export const CalendarProvider = ({children}) => {
         }
     }
 
-    const decreaseMonth = () => {}
+    const decreaseMonth = () => {
+        let current = currentMonth;
+        if ((current -= 1) === 0) {
+            setCurrentMonth(12)
+            setCurrentYear(currentYear - 1)
+        } else {
+            setCurrentMonth(currentMonth - 1)
+        }
+    }
 
     const value = {
         getNewMonth,
