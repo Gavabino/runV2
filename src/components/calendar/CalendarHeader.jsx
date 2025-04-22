@@ -7,9 +7,9 @@ const CalendarHeader = ({month}) => {
     return (
         <caption style={internalStyles.container}>
         <div style={internalStyles.text}>
-                <button className={styles.button} style={styles.button} onClick={() => decreaseMonth()}>&lt;</button>
+                <button className={styles.button} onClick={() => decreaseMonth()}>&lt;</button>
                 {month.title}
-                <button className={styles.button} style={styles.button} onClick={() => increaseMonth()}>&gt;</button>
+                <button className={styles.button} onClick={() => increaseMonth()}>&gt;</button>
         </div>
         </caption>
     )
