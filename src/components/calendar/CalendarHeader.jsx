@@ -6,9 +6,9 @@ const CalendarHeader = ({month}) => {
 
     return (
         <caption style={internalStyles.container}>
-        <div style={internalStyles.text}>
+        <div style={internalStyles.flexContainer}>
                 <button className={styles.button} onClick={() => decreaseMonth()}>&lt;</button>
-                {month.title}
+                <p style={internalStyles.text}>{month.title}</p>
                 <button className={styles.button} onClick={() => increaseMonth()}>&gt;</button>
         </div>
         </caption>
@@ -23,7 +23,12 @@ const internalStyles = {
         fontFamily: 'var(--font-primary)',
         fontSize: 'var(--font-xl)',
         color: 'var(--accent1)',
+        padding: "var(--spacing-xxs)"
     },
+    flexContainer: {
+        display: 'flex',
+        justifyContent: 'space-around',
+    }
 }
 
 export default CalendarHeader
