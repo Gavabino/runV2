@@ -1,4 +1,4 @@
-import {useCalendar} from "../../contexts/CalendarContext.jsx";
+import {useCalendar} from "../../contexts/CalendarContext.js";
 import CalendarContainer from "./CalendarContainer.jsx";
 import CalendarHeader from "./CalendarHeader.jsx";
 import TableHeader from "./TableHeader.jsx";

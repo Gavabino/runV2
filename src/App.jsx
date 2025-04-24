@@ -1,6 +1,6 @@
 import './App.css'
 import Calendar from "./components/calendar/Calendar.jsx";
-import {CalendarProvider} from "./contexts/CalendarContext.jsx";
+import CalendarProvider from "./contexts/CalendarProvider.jsx";
 
 function App() {
 

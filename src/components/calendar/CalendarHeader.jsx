@@ -1,4 +1,4 @@
-import {useCalendar} from "../../contexts/CalendarContext.jsx";
+import {useCalendar} from "../../contexts/CalendarContext.js";
 import styles from "./CalendarHeader.module.css";
 
 const CalendarHeader = ({month}) => {
