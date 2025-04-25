@@ -1,7 +1,16 @@
+import AddButton from "./AddButton.jsx";
+import {useState} from "react";
+
 const DayView = ({day, currentDay}) => {
+    const [isHovered, setHovered] = useState(false);
+
     return (
-        <td style={day.calendarDay ? styles.container : styles.emptyContainer}>
+        <td style={day.calendarDay ? styles.container : styles.emptyContainer}
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+        >
             <p style={currentDay ? styles.dateCurrent : styles.date}>{day.dayNumber}</p>
+            {(isHovered && day.calendarDay) && (<AddButton/>)}
         </td>
     )
 }
