@@ -1,7 +1,7 @@
-const DayView = ({day}) => {
+const DayView = ({day, currentDay}) => {
     return (
         <td style={day.calendarDay ? styles.container : styles.emptyContainer}>
-            <p style={styles.date}>{day.dayNumber}</p>
+            <p style={currentDay ? styles.dateCurrent : styles.date}>{day.dayNumber}</p>
         </td>
     )
 }
@@ -21,6 +21,17 @@ const styles = {
         fontFamily: 'var(--font-primary)',
         fontSize: 'var(--font-m)',
         color: 'var(--accent2)'
+    },
+    dateCurrent: {
+        position: 'absolute',
+        top: '0',
+        right: '0',
+        padding: 'var(--spacing-xxs)',
+        fontFamily: 'var(--font-primary)',
+        fontSize: 'var(--font-m)',
+        fontWeight: 'bold',
+        textDecoration: 'underline',
+        color: 'var(--accent3)'
     },
     emptyContainer: {
         width: '15vw',

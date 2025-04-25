@@ -46,7 +46,7 @@ const CalendarProvider = ({ children }) => {
                 uuid: uuidv4(),
             });
         }
-
+        console.log(newDaysArray)
         return newDaysArray;
     };
 
